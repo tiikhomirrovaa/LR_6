@@ -36,6 +36,7 @@ namespace Calculator
             }
 
             Console.WriteLine($"Результат: {result}");
+            Console.WriteLine("commit");
         }
     }
 }
