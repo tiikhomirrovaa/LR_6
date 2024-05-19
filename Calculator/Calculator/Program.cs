@@ -43,8 +43,7 @@ namespace Calculator
                         result = num1 / num2;
                         break;
                     default:
-                        Console.WriteLine("Неправильный оператор");
-                        break;
+                        throw new InvalidOperationException("Неправильный оператор.");
                 }
 
                 // Вывод результата
@@ -55,6 +54,10 @@ namespace Calculator
                 Console.WriteLine("Ошибка: Введите корректное число.");
             }
             catch (DivideByZeroException ex)
+            {
+                Console.WriteLine($"Ошибка: {ex.Message}");
+            }
+            catch (InvalidOperationException ex)
             {
                 Console.WriteLine($"Ошибка: {ex.Message}");
             }
