@@ -5,7 +5,9 @@ namespace Calculator
     class Program
     {
         static void Main(string[] args)
-        {           
+        {
+            // Приветственное сообщение
+            Console.WriteLine("Добро пожаловать в простой калькулятор!");
             Console.WriteLine("Введите первое число:");
             double num1 = Convert.ToDouble(Console.ReadLine());
 
