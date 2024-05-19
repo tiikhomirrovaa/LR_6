@@ -36,6 +36,10 @@ namespace Calculator
                         result = num1 * num2;
                         break;
                     case '/':
+                        if (num2 == 0)
+                        {
+                            throw new DivideByZeroException("Деление на ноль невозможно.");
+                        }
                         result = num1 / num2;
                         break;
                     default:
@@ -49,6 +53,10 @@ namespace Calculator
             catch (FormatException)
             {
                 Console.WriteLine("Ошибка: Введите корректное число.");
+            }
+            catch (DivideByZeroException ex)
+            {
+                Console.WriteLine($"Ошибка: {ex.Message}");
             }
         }
     }
